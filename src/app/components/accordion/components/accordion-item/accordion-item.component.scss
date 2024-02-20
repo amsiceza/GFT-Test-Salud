@@ -1,0 +1,20 @@
+.item-container{
+    display: flex;
+    flex-direction: column;
+    .item-margin{
+        margin-left: 3.8rem;
+        
+    }
+    .item-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        div{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            
+        }
+    }
+}

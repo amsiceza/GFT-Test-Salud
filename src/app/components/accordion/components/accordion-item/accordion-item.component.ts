@@ -10,4 +10,8 @@ export class AccordionItemComponent {
   @Input({required: true}) item: GenomicsViaje | undefined
 
   isOpen : boolean = false
+
+  handleOpen(){
+    this.isOpen = !this.isOpen
+  }
 }
