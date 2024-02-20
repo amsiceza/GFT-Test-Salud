@@ -1,20 +1,33 @@
 <div class="item-container">
   <div class="item-title">
     <div class="left-part">
-        <span class="material-symbols-outlined " [ngClass]="{'circle' : item?.estado == 'realizado'}"> {{item?.estado == "realizado" ? "check_circle" : "radio_button_unchecked"}} </span>
-        <h1>{{ item?.titulo }}</h1>
+      <span
+        class="material-symbols-outlined"
+        [ngClass]="{ circle: item?.estado == 'realizado' }"
+      >
+        {{
+          item?.estado == "realizado"
+            ? "check_circle"
+            : "radio_button_unchecked"
+        }}
+      </span>
+      <h1>{{ item?.titulo }}</h1>
     </div>
-    
-    <span class="material-symbols-outlined expand-icon" (click)="handleOpen()"> {{isOpen ? "expand_less" : "expand_more"}} </span>
+
+    <span class="material-symbols-outlined expand-icon" (click)="handleOpen()">
+      {{ isOpen ? "expand_less" : "expand_more" }}
+    </span>
   </div>
 
-  <ng-container  *ngIf="isOpen">
+  <ng-container *ngIf="isOpen">
     <div class="item-margin">
-        <p>{{ item?.subtitulo }}</p>
-        <span>{{ item?.fecha }}</span>
+      <p>{{ item?.subtitulo }}</p>
+      <span>{{ item?.fecha }}</span>
     </div>
-    
   </ng-container>
-  <p class="item-margin state">{{ item?.estado }}</p>
+  <p class="item-margin state" *ngIf="item?.estado != 'deshabilitado'">
+    <span class="material-symbols-outlined state-circle" [ngClass]="{done: item?.estado == 'realizado' , pending: item?.estado == 'pendiente'}"> radio_button_unchecked </span
+    >{{ item?.estado }}
+  </p>
   <span id="bar" *ngIf="!isLast"></span>
 </div>
