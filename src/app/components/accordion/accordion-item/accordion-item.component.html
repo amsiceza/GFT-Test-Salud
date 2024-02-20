@@ -1,0 +1,8 @@
+<div>
+    <h1>{{item?.titulo}}</h1>
+    <ng-container *ngIf="isOpen">
+        <p>{{item?.subtitulo}}</p>
+        <span>{{item?.fecha}}</span>
+    </ng-container>
+    <p>{{item?.estado}}</p>
+</div>

@@ -1,4 +1,4 @@
-const data = [
+const genomicsData = [
   {
     titulo: 'Consulta con el cardiólogo',
     subtitulo: 'Revisión de la presión arterial y el colesterol',

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GenomicsViaje } from 'src/interfaces/genomics-viaje';
 
 @Component({
   selector: 'app-accordion',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent {
-
+  @Input({required: true}) data: GenomicsViaje[] | undefined
 }
