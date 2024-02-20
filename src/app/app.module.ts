@@ -3,10 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DigitalGenomicsInicioComponent } from './components/digital-genomics-inicio/digital-genomics-inicio.component';
+import { AccordionItemComponent } from './components/accordion-item/accordion-item.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DigitalGenomicsInicioComponent,
+    AccordionItemComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,
