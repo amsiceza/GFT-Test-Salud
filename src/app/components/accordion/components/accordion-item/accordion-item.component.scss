@@ -1,34 +1,44 @@
+.disabled{
+    color: var(--hardGrey);
+}
 .item-container {
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 50px;
 
     .item-margin {
         margin-left: 4.1rem;
-        p{
+
+        p {
             font-size: 14px;
         }
-        span{
+
+        span {
             color: var(--hardGrey);
         }
 
     }
-    .state{
+
+    .state {
         text-transform: capitalize;
         display: flex;
         align-items: center;
         gap: 0.5rem;
         margin-top: 5px;
         margin-bottom: 30px;
-        .state-circle{
+
+        .state-circle {
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             font-size: 14px;
         }
-        .done{
+
+        .done {
             color: var(--done);
         }
-        .pending{
+
+        .pending {
             color: var(--pending)
         }
     }
@@ -38,7 +48,8 @@
         align-items: center;
         justify-content: space-between;
         gap: 0.5rem;
-        .expand-icon{
+
+        .expand-icon {
             cursor: pointer;
             color: var(--blue);
         }
@@ -47,26 +58,27 @@
             display: flex;
             align-items: flex-start;
             gap: 2rem;
-            h1{
+
+            h1 {
                 font-size: 16px;
             }
 
             .material-symbols-outlined {
                 color: var(--grey);
-                font-variation-settings:  'wght' 300, 
+                font-variation-settings: 'wght' 300,
             }
 
             .circle {
                 z-index: 1;
                 color: var(--blue);
                 font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-                
-                
+
+
             }
 
         }
     }
-    
+
     #bar {
         position: absolute;
         width: 2px;

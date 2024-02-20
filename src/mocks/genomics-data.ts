@@ -27,13 +27,13 @@ export const genomicsData = [
     titulo: 'Vacunación contra la gripe',
     subtitulo: 'Prevenir la infección por el virus de la influenza',
     fecha: '25/02/2024',
-    estado: 'pendiente',
+    estado: 'realizado',
   },
   {
     titulo: 'Consulta con el dentista',
     subtitulo: 'Limpieza dental y revisión de las encías',
     fecha: '01/03/2024',
-    estado: 'pendiente',
+    estado: 'realizado',
   },
   {
     titulo: 'Consulta con el oftalmólogo',
@@ -51,7 +51,7 @@ export const genomicsData = [
     titulo: 'Consulta con el endocrinólogo',
     subtitulo: 'Control de la diabetes y la tiroides',
     fecha: '22/03/2024',
-    estado: 'pendiente',
+    estado: 'deshabilitado',
   },
   {
     titulo: 'Análisis de sangre',

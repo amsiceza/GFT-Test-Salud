@@ -1,4 +1,4 @@
-<div class="item-container">
+<div class="item-container" [ngClass]="{disabled: item?.estado == 'deshabilitado'}">
   <div class="item-title">
     <div class="left-part">
       <span
@@ -14,7 +14,7 @@
       <h1>{{ item?.titulo }}</h1>
     </div>
 
-    <span class="material-symbols-outlined expand-icon" (click)="handleOpen()">
+    <span class="material-symbols-outlined expand-icon" (click)="handleOpen()" *ngIf="item?.estado != 'deshabilitado'">
       {{ isOpen ? "expand_less" : "expand_more" }}
     </span>
   </div>
