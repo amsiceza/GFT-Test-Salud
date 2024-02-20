@@ -1,11 +1,11 @@
 <div class="item-container">
   <div class="item-title">
-    <div>
-        <span class="material-symbols-outlined"> check_circle </span>
+    <div class="left-part">
+        <span class="material-symbols-outlined " [ngClass]="{'circle' : item?.estado == 'realizado'}"> {{item?.estado == "realizado" ? "check_circle" : "radio_button_unchecked"}} </span>
         <h1>{{ item?.titulo }}</h1>
     </div>
     
-    <span class="material-symbols-outlined" (click)="handleOpen()"> {{isOpen ? "expand_less" : "expand_more"}} </span>
+    <span class="material-symbols-outlined expand-icon" (click)="handleOpen()"> {{isOpen ? "expand_less" : "expand_more"}} </span>
   </div>
 
   <ng-container  *ngIf="isOpen">
@@ -15,5 +15,6 @@
     </div>
     
   </ng-container>
-  <p class="item-margin">{{ item?.estado }}</p>
+  <p class="item-margin state">{{ item?.estado }}</p>
+  <span id="bar" *ngIf="!isLast"></span>
 </div>

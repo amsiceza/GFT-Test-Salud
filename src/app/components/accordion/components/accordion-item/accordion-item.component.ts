@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GenomicsViaje } from 'src/interfaces/genomics-viaje';
 
 @Component({
@@ -6,8 +6,9 @@ import { GenomicsViaje } from 'src/interfaces/genomics-viaje';
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.scss']
 })
-export class AccordionItemComponent {
+export class AccordionItemComponent{
   @Input({required: true}) item: GenomicsViaje | undefined
+  @Input() isLast : boolean | undefined
 
   isOpen : boolean = false
 
